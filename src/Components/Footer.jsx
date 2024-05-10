@@ -1,6 +1,6 @@
 
 
-const AuthProvider = () => {
+const Footer = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const AuthProvider = () => {
     );
 };
 
-export default AuthProvider;
+export default Footer;
