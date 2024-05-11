@@ -1,10 +1,6 @@
-
-
 const AllBooks = () => {
     return (
-        <div>
-            
-        </div>
+       <div></div>
     );
 };
 
