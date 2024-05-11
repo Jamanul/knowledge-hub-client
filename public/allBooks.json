@@ -1,0 +1,303 @@
+[
+    {
+      "image": "image_url_1",
+      "name": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "category": "Novel",
+      "quantity": 10,
+      "rating": 4.8,
+      "short_description": "A classic novel about racial injustice and loss of innocence in the American South.",
+      "long_description": "To Kill a Mockingbird is a novel by Harper Lee published in 1960. It is set in the fictional town of Maycomb, Alabama, and follows the experiences of Scout Finch, a young girl growing up in the segregated Southern United States. The novel deals with the irrationality of adult attitudes towards race and class in the Deep South of the 1930s, as seen through the innocent eyes of Scout and her brother Jem."
+    },
+    {
+      "image": "image_url_2",
+      "name": "The Girl with the Dragon Tattoo",
+      "author": "Stieg Larsson",
+      "category": "Thriller",
+      "quantity": 8,
+      "rating": 4.4,
+      "short_description": "A gripping mystery featuring a complex and enigmatic female hacker.",
+      "long_description": "The Girl with the Dragon Tattoo is a psychological thriller novel by Swedish author Stieg Larsson. It introduces the characters of Lisbeth Salander, a brilliant but troubled hacker, and Mikael Blomkvist, an investigative journalist. The novel tells the story of their involvement in the mystery surrounding the disappearance of a young woman several decades earlier."
+    },
+    {
+      "image": "image_url_3",
+      "name": "A Brief History of Time",
+      "author": "Stephen Hawking",
+      "category": "Science",
+      "quantity": 15,
+      "rating": 4.6,
+      "short_description": "An accessible explanation of complex concepts in physics and cosmology.",
+      "long_description": "A Brief History of Time is a popular science book by physicist Stephen Hawking. It provides an overview of key topics in theoretical physics, such as the Big Bang theory, black holes, and the nature of time. Despite its complex subject matter, the book is written in a clear and accessible style, making it suitable for a general audience."
+    },
+    {
+      "image": "image_url_4",
+      "name": "1984",
+      "author": "George Orwell",
+      "category": "Dystopian",
+      "quantity": 12,
+      "rating": 4.7,
+      "short_description": "A chilling portrayal of a totalitarian society where individuality is suppressed.",
+      "long_description": "1984 is a dystopian novel by English writer George Orwell. It depicts a society under the oppressive rule of a totalitarian regime led by the Party and its enigmatic leader Big Brother. The novel follows the life of Winston Smith, a low-ranking member of the Party, as he grapples with his own thoughts and feelings in a world where independent thinking is forbidden."
+    },
+    {
+      "image": "image_url_5",
+      "name": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "category": "Novel",
+      "quantity": 9,
+      "rating": 4.3,
+      "short_description": "A coming-of-age novel that explores themes of alienation and identity.",
+      "long_description": "The Catcher in the Rye is a novel by J.D. Salinger, first published in 1951. It follows the experiences of Holden Caulfield, a disaffected teenager who has been expelled from prep school and wanders through New York City, grappling with the phoniness and hypocrisy he perceives in the adult world. The novel is known for its frank portrayal of adolescence and its exploration of themes such as alienation, identity, and authenticity."
+    },
+    {
+      "image": "image_url_6",
+      "name": "Gone Girl",
+      "author": "Gillian Flynn",
+      "category": "Thriller",
+      "quantity": 7,
+      "rating": 4.5,
+      "short_description": "A dark and twisted tale of marriage and deception.",
+      "long_description": "Gone Girl is a psychological thriller novel by Gillian Flynn. It tells the story of Nick and Amy Dunne, a married couple whose relationship takes a sinister turn when Amy goes missing on their fifth wedding anniversary. As the investigation unfolds, secrets and lies come to light, and the true nature of their marriage is revealed."
+    },
+    {
+      "image": "image_url_7",
+      "name": "The Da Vinci Code",
+      "author": "Dan Brown",
+      "category": "Thriller",
+      "quantity": 11,
+      "rating": 4.2,
+      "short_description": "A fast-paced thriller that explores religious conspiracy theories.",
+      "long_description": "The Da Vinci Code is a mystery thriller novel by Dan Brown. It follows symbologist Robert Langdon and cryptologist Sophie Neveu as they investigate a murder in the Louvre Museum and unravel a trail of clues that lead to the discovery of a centuries-old religious conspiracy. The novel is known for its blend of fact and fiction, as well as its controversial interpretations of historical events and religious symbolism."
+    },
+    {
+      "image": "image_url_8",
+      "name": "Sapiens: A Brief History of Humankind",
+      "author": "Yuval Noah Harari",
+      "category": "History",
+      "quantity": 13,
+      "rating": 4.9,
+      "short_description": "A sweeping narrative that explores the history of Homo sapiens.",
+      "long_description": "Sapiens: A Brief History of Humankind is a book by Yuval Noah Harari. It provides a comprehensive overview of the history of Homo sapiens, from the emergence of our species in Africa to the present day. The book covers a wide range of topics, including the cognitive revolution, the agricultural revolution, the rise of empires, and the scientific revolution."
+    },
+    {
+      "image": "image_url_9",
+      "name": "The Martian",
+      "author": "Andy Weir",
+      "category": "Sci-Fi",
+      "quantity": 6,
+      "rating": 4.6,
+      "short_description": "An exhilarating tale of survival and ingenuity on the Red Planet.",
+      "long_description": "The Martian is a science fiction novel by Andy Weir. It follows astronaut Mark Watney as he is stranded on Mars and must use his ingenuity and resourcefulness to survive until rescue is possible. The novel is known for its scientifically accurate portrayal of space travel and its humorously irreverent tone."
+    },
+    {
+      "image": "image_url_10",
+      "name": "The Hunger Games",
+      "author": "Suzanne Collins",
+      "category": "Sci-Fi",
+      "quantity": 8,
+      "rating": 4.5,
+      "short_description": "A thrilling dystopian saga set in a post-apocalyptic world.",
+      "long_description": "The Hunger Games is a trilogy of young adult dystopian novels by Suzanne Collins. Set in a future where the United States has collapsed and been replaced by the authoritarian nation of Panem, the novels follow the experiences of Katniss Everdeen as she navigates the brutal and deadly Hunger Games, a televised fight to the death among young tributes from the country's twelve districts."
+    },
+    {
+      "image": "image_url_11",
+      "name": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "category": "Novel",
+      "quantity": 14,
+      "rating": 4.7,
+      "short_description": "A witty and romantic comedy of manners set in Georgian England.",
+      "long_description": "Pride and Prejudice is a novel by Jane Austen, first published in 1813. It follows the romantic entanglements of the Bennet sisters, particularly the independent and spirited Elizabeth Bennet, as they navigate the social hierarchy of early 19th-century England. The novel is known for its sharp wit, memorable characters, and timeless exploration of love and marriage."
+    },
+    {
+      "image": "image_url_12",
+      "name": "The Shining",
+      "author": "Stephen King",
+      "category": "Horror",
+      "quantity": 9,
+      "rating": 4.4,
+      "short_description": "A terrifying tale of supernatural horror set in an isolated hotel.",
+      "long_description": "The Shining is a horror novel by Stephen King. It tells the story of Jack Torrance, an aspiring writer and recovering alcoholic who becomes the winter caretaker of the Overlook Hotel, a remote and haunted resort in the Colorado Rockies. As the hotel's malevolent influence takes hold, Jack's sanity unravels, and he becomes a threat to his wife Wendy and their young son Danny."
+    },
+    {
+      "image": "image_url_13",
+      "name": "The Kite Runner",
+      "author": "Khaled Hosseini",
+      "category": "Drama",
+      "quantity": 7,
+      "rating": 4.6,
+      "short_description": "A moving tale of friendship, betrayal, and redemption set in Afghanistan.",
+      "long_description": "The Kite Runner is a novel by Khaled Hosseini. It follows the story of Amir, a young boy from Kabul, and his complex relationship with Hassan, the son of his father's servant. Against the backdrop of Afghanistan's tumultuous history, the novel explores themes of guilt, forgiveness, and the search for redemption."
+    },
+    {
+      "image": "image_url_14",
+      "name": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "category": "Fantasy",
+      "quantity": 11,
+      "rating": 4.8,
+      "short_description": "An epic adventure set in the magical world of Middle-earth.",
+      "long_description": "The Hobbit, or There and Back Again, is a fantasy novel by J.R.R. Tolkien. It follows the journey of Bilbo Baggins, a hobbit who is recruited by the wizard Gandalf to join a group of dwarves on a quest to reclaim their homeland and treasure from the dragon Smaug. Along the way, Bilbo encounters trolls, goblins, elves, and other fantastical creatures, and discovers courage and resourcefulness he never knew he had."
+    },
+    {
+      "image": "image_url_15",
+      "name": "The Picture of Dorian Gray",
+      "author": "Oscar Wilde",
+      "category": "Novel",
+      "quantity": 8,
+      "rating": 4.5,
+      "short_description": "A philosophical novel about the nature of beauty and morality.",
+      "long_description": "The Picture of Dorian Gray is a novel by Oscar Wilde, first published in 1890. It tells the story of Dorian Gray, a young man who remains perpetually youthful while a portrait of him ages and reflects the consequences of his sinful and hedonistic lifestyle. The novel explores themes of vanity, decadence, and the pursuit of aesthetic pleasure."
+    },
+    {
+      "image": "image_url_16",
+      "name": "The Alchemist",
+      "author": "Paulo Coelho",
+      "category": "Fiction",
+      "quantity": 10,
+      "rating": 4.7,
+      "short_description": "A philosophical fable about following one's dreams and destiny.",
+      "long_description": "The Alchemist is a novel by Brazilian author Paulo Coelho. It follows the journey of Santiago, a young Andalusian shepherd who dreams of finding a treasure buried near the pyramids of Egypt. Along the way, Santiago encounters a series of characters who impart wisdom and guidance, helping him discover the true meaning of his quest."
+    },
+    {
+      "image": "image_url_17",
+      "name": "The Lord of the Rings",
+      "author": "J.R.R. Tolkien",
+      "category": "Fantasy",
+      "quantity": 12,
+      "rating": 4.9,
+      "short_description": "An epic fantasy trilogy set in the world of Middle-earth.",
+      "long_description": "The Lord of the Rings is a fantasy trilogy by J.R.R. Tolkien, consisting of The Fellowship of the Ring, The Two Towers, and The Return of the King. Set in the fictional world of Middle-earth, the novels follow the quest of the hobbit Frodo Baggins to destroy the One Ring, a powerful artifact that threatens to plunge the world into darkness. Along the way, Frodo is joined by a fellowship of diverse characters, including humans, elves, dwarves, and wizards, as they confront dark forces and embark on a perilous journey to Mount Doom."
+    },
+    {
+      "image": "image_url_18",
+      "name": "The Silent Patient",
+      "author": "Alex Michaelides",
+      "category": "Thriller",
+      "quantity": 6,
+      "rating": 4.5,
+      "short_description": "A gripping psychological thriller with a shocking twist.",
+      "long_description": "The Silent Patient is a psychological thriller novel by Alex Michaelides. It follows the story of Alicia Berenson, a famous painter who is accused of murdering her husband and then stops speaking altogether. The novel is narrated by Theo Faber, a forensic psychiatrist who becomes obsessed with uncovering the truth behind Alicia's silence and the events leading up to her husband's death."
+    },
+    {
+      "image": "image_url_19",
+      "name": "The Road",
+      "author": "Cormac McCarthy",
+      "category": "Dystopian",
+      "quantity": 8,
+      "rating": 4.4,
+      "short_description": "A post-apocalyptic tale of survival and father-son bond.",
+      "long_description": "The Road is a post-apocalyptic novel by Cormac McCarthy. It follows the journey of a father and his young son as they travel through a desolate and dangerous landscape in search of safety and hope. The novel explores themes of survival, love, and the enduring power of human kindness in the face of unimaginable adversity."
+    },
+    {
+      "image": "image_url_20",
+      "name": "The Secret History",
+      "author": "Donna Tartt",
+      "category": "Mystery",
+      "quantity": 9,
+      "rating": 4.6,
+      "short_description": "A dark and atmospheric mystery set in an elite college.",
+      "long_description": "The Secret History is a mystery novel by Donna Tartt. It follows a group of students at an elite college who become involved in a murder plot that ultimately leads to tragedy. The novel is narrated by Richard Papen, an outsider who is drawn into the inner circle of his eccentric and enigmatic classmates. As Richard becomes entangled in their world of privilege and obsession, he uncovers dark secrets that threaten to destroy them all."
+    },
+    {
+      "image": "image_url_21",
+      "name": "The Stand",
+      "author": "Stephen King",
+      "category": "Horror",
+      "quantity": 7,
+      "rating": 4.7,
+      "short_description": "An epic post-apocalyptic tale of good versus evil.",
+      "long_description": "The Stand is a horror novel by Stephen King. It tells the story of a world decimated by a superflu pandemic and the struggle between the forces of good and evil that emerge in its aftermath. The novel follows a diverse cast of characters as they navigate the ruins of civilization and confront their own inner demons. At its heart, The Stand is a meditation on the nature of humanity and the eternal battle between light and darkness."
+    },
+    {
+      "image": "image_url_22",
+      "name": "Jurassic Park",
+      "author": "Michael Crichton",
+      "category": "Science Fiction",
+      "quantity": 10,
+      "rating": 4.5,
+      "short_description": "A thrilling adventure featuring genetically engineered dinosaurs.",
+      "long_description": "Jurassic Park is a science fiction novel by Michael Crichton. It tells the story of a theme park populated by genetically engineered dinosaurs, created by billionaire philanthropist John Hammond. When the park's security systems fail, chaos ensues, and a group of visitors must fight for survival against prehistoric predators. The novel explores themes of scientific ethics, the consequences of tampering with nature, and the hubris of human ambition."
+    },
+    {
+      "image": "image_url_23",
+      "name": "Harry Potter and the Philosopher's Stone",
+      "author": "J.K. Rowling",
+      "category": "Fantasy",
+      "quantity": 15,
+      "rating": 4.9,
+      "short_description": "The magical journey begins with a young boy discovering his true identity.",
+      "long_description": "Harry Potter and the Philosopher's Stone is the first novel in the Harry Potter series by J.K. Rowling. It follows the story of Harry Potter, a young orphan who discovers on his eleventh birthday that he is a wizard and has been accepted to Hogwarts School of Witchcraft and Wizardry. As Harry begins his magical education, he uncovers secrets about his past and confronts the dark wizard Voldemort, who seeks to destroy him."
+    },
+    {
+      "image": "image_url_24",
+      "name": "The Road Less Traveled",
+      "author": "M. Scott Peck",
+      "category": "Self-Help",
+      "quantity": 11,
+      "rating": 4.6,
+      "short_description": "A guide to personal growth and spiritual development.",
+      "long_description": "The Road Less Traveled is a self-help book by psychiatrist and author M. Scott Peck. It explores themes of love, responsibility, and spiritual growth, offering practical advice on how to overcome obstacles and live a fulfilling life. The book emphasizes the importance of discipline, commitment, and honesty in the pursuit of personal and spiritual growth."
+    },
+    {
+      "image": "image_url_25",
+      "name": "The Handmaid's Tale",
+      "author": "Margaret Atwood",
+      "category": "Dystopian",
+      "quantity": 9,
+      "rating": 4.7,
+      "short_description": "A chilling vision of a future society ruled by religious extremism.",
+      "long_description": "The Handmaid's Tale is a dystopian novel by Margaret Atwood. It is set in the Republic of Gilead, a totalitarian society where women are subjugated and used for reproductive purposes. The novel follows the story of Offred, a handmaid who struggles to survive and maintain her identity in a world where individuality and freedom are ruthlessly suppressed."
+    },
+    {
+      "image": "image_url_26",
+      "name": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "category": "Novel",
+      "quantity": 10,
+      "rating": 4.5,
+      "short_description": "A coming-of-age novel that explores themes of alienation and identity.",
+      "long_description": "The Catcher in the Rye is a novel by J.D. Salinger, first published in 1951. It follows the experiences of Holden Caulfield, a disaffected teenager who has been expelled from prep school and wanders through New York City, grappling with the phoniness and hypocrisy he perceives in the adult world. The novel is known for its frank portrayal of adolescence and its exploration of themes such as alienation, identity, and authenticity."
+    },
+    {
+      "image": "image_url_27",
+      "name": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "category": "Novel",
+      "quantity": 8,
+      "rating": 4.8,
+      "short_description": "A story of love, wealth, and excess in the Jazz Age.",
+      "long_description": "The Great Gatsby is a novel by F. Scott Fitzgerald, first published in 1925. It is set in the fictional town of West Egg on Long Island and follows the experiences of Jay Gatsby, a mysterious and wealthy man who becomes entangled in a complex love triangle with the beautiful Daisy Buchanan and her husband Tom. The novel explores themes of wealth, class, and the American Dream."
+    },
+    {
+      "image": "image_url_28",
+      "name": "The Book Thief",
+      "author": "Markus Zusak",
+      "category": "Historical Fiction",
+      "quantity": 7,
+      "rating": 4.6,
+      "short_description": "A poignant and moving tale set during World War II.",
+      "long_description": "The Book Thief is a historical fiction novel by Markus Zusak. It is narrated by Death and tells the story of Liesel Meminger, a young girl living in Nazi Germany who steals books to escape the horrors of war and find solace in words. The novel explores themes of love, loss, and the power of literature to provide comfort and hope in the darkest of times."
+    },
+    {
+      "image": "image_url_29",
+      "name": "The Name of the Wind",
+      "author": "Patrick Rothfuss",
+      "category": "Fantasy",
+      "quantity": 9,
+      "rating": 4.7,
+      "short_description": "An epic fantasy saga about a legendary hero and his quest for revenge.",
+      "long_description": "The Name of the Wind is a fantasy novel by Patrick Rothfuss. It is the first book in The Kingkiller Chronicle series and tells the story of Kvothe, a gifted young musician and magician who grows up to become a legendary hero. The novel is framed as a recounting of Kvothe's life story to a scribe named Chronicler, and it follows his adventures as he seeks revenge on those who wronged him and uncovers the secrets of his mysterious past."
+    },
+    {
+      "image": "image_url_30",
+      "name": "A Song of Ice and Fire",
+      "author": "George R.R. Martin",
+      "category": "Fantasy",
+      "quantity": 10,
+      "rating": 4.9,
+      "short_description": "A sprawling epic of political intrigue, war, and dragons.",
+      "long_description": "A Song of Ice and Fire is a series of epic fantasy novels by George R.R. Martin. It is set in the fictional continents of Westeros and Essos and follows the power struggles between noble houses as they vie for control of the Iron Throne. The series is known for its complex characters, intricate plotting, and gritty realism, as well as its unpredictable twists and shocking moments."
+    }
+  ]
+  

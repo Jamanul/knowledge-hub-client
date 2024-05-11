@@ -1,5 +1,6 @@
 
-const Home = () => {
+
+const BorrowedBooks = () => {
     return (
         <div>
             
@@ -7,4 +8,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default BorrowedBooks;
