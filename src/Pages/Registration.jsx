@@ -1,38 +1,49 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Registration = () => {
     return (
-        <div className="hero min-h-screen bg-base-200">
-  <div className="hero-content flex-col lg:flex-row-reverse">
-    <div className="text-center lg:text-left">
-     
-     
-    </div>
-    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-    <h1 className="text-5xl font-bold">Register now!</h1>
-      <form className="card-body">
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Email</span>
-          </label>
-          <input type="email" placeholder="email" className="input input-bordered" required />
+        <div className="hero min-h-screen">
+        <div className="hero-content flex-col lg:flex-row-reverse">
+          <div className="text-center flex-1  lg:text-left">
+              <img className='rounded-3xl' src='https://i.postimg.cc/cJWpj0ZV/42c21514af6645b219178ad6339687bd.jpg'></img>
+          </div>
+          <div className=" py-[70px] flex-1 border rounded-3xl border-[#E17A2A] w-full max-w-sm "> 
+           <h1 className="text-5xl text-center text-[#666666] border-b border-[#E17A2A] pb-2 mx-4 font-bold">Register now!</h1>
+            <form className="card-body">
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text text-[#666666]">Your Name</span>
+                </label>
+                <input type="text" name='yourName' placeholder="Your name" className="input input-bordered text-[#666666]" required />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text text-[#666666]">Email</span>
+                </label>
+                <input type="email" name='email' placeholder="email" className="input input-bordered text-[#666666]" required />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text text-[#666666]">Photo URL</span>
+                </label>
+                <input type="text" name='photoUrl' placeholder="Photo URL" className="input input-bordered text-[#666666]" required />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text text-[#666666]">Password</span>
+                </label>
+                <input type="password" name='password' placeholder="password" className="input input-bordered text-[#666666]" required />
+                
+              </div>
+              <div className="form-control mt-6">
+                <button className="btn bg-[#666666] text-[#fc984c] font-bold">Register</button>
+              </div>
+            </form>
+            <p className='text-[#666666] text-center'>Already have an account? <span className='text-[#E17A2A] font-bold'><Link to='/login'>Click here to login.</Link></span></p>
+          </div>
         </div>
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Password</span>
-          </label>
-          <input type="password" placeholder="password" className="input input-bordered" required />
-          <label className="label">
-            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-          </label>
-        </div>
-        <div className="form-control mt-6">
-          <button className="btn btn-primary">Login</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
+      </div>
     );
 };
 
