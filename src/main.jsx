@@ -14,11 +14,13 @@ import AddBooks from './Pages/AddBooks.jsx';
 import AllBooks from './Pages/AllBooks.jsx';
 import BorrowedBooks from './Pages/BorrowedBooks.jsx';
 import AuthProvider from './FirebaseAuth/AuthProvider.jsx';
+import ErrorPage from './Pages/ErrorPage.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement:<ErrorPage></ErrorPage>,
     children:[
       {
         path:"/",

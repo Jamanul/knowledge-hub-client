@@ -4,7 +4,7 @@ import { AuthContext } from '../FirebaseAuth/AuthProvider';
 import { toast } from 'react-toastify';
 
 const Registration = () => {
-    const {registerUser,updateUser,loading,user}=useContext(AuthContext)
+    const {registerUser,updateUser,loading,user,setUser}=useContext(AuthContext)
     const handleRegister =(e)=>{
         e.preventDefault()
         const form =e.target;
@@ -12,15 +12,26 @@ const Registration = () => {
         const email =form.email.value;
         const photoUrl=form.photoUrl.value;
         const password=form.password.value;
+        if(password.length<6){
+            return toast.error('password must be 6 characters long.')
+        }
+        if(!/^(?=.*[$&+,:;=?@#|'<>.^*()%!-]).{6,}$/.test(password)){
+            return toast.error('password must contain on uppercase letter and a special character')
+        }
+        if(!/^(?=.*[A-Z])(?=.*[!@#$%^&*()-_+=?]).{6,}$/.test(password)){
+            return toast.error('password must contain on uppercase letter and a special character')
+        }
+       
         registerUser(email,password,name,photoUrl)
         .then(result=>{
             console.log(result.user)
-            if(loading){
-                return <span className="loading loading-spinner loading-lg"></span>
-            }
+            
             updateUser(name,photoUrl)
-            .then({...user, displayName: name ,photoURL : photoUrl})
-            toast.success('created a user')
+            setUser({...user,displayName:name,photoURL:photoUrl})
+           
+             
+              toast.success("Account created successfully.")
+            
         })
         .catch(error=>{
             console.log(error)

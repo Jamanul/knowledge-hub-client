@@ -1,7 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../FirebaseAuth/AuthProvider';
+import { toast } from 'react-toastify';
 
 const Login = () => {
+    const {loginUser,loginUserWithGoogle}=useContext(AuthContext)
+    const handleLogin=(e)=>{
+        e.preventDefault()
+        const form=e.target;
+        const email=form.email.value
+        const password=form.password.value
+        loginUser(email,password)
+        .then(result=>{
+            console.log(result.user)
+            toast.success('Logged in successfully')})
+        .catch(error=>{
+            console.log(error.message)
+            toast.error('User right credentials')
+        })
+    }
     return (
         <div className="hero min-h-screen">
   <div className="hero-content flex-col lg:flex-row-reverse">
@@ -10,7 +27,7 @@ const Login = () => {
     </div>
     <div className=" py-[108px] flex-1 border rounded-3xl border-[#E17A2A] w-full max-w-sm "> 
      <h1 className="text-5xl text-center text-[#666666] border-b border-[#E17A2A] pb-2 mx-12 font-bold">Login now!</h1>
-      <form className="card-body">
+      <form onSubmit={handleLogin} className="card-body">
         <div className="form-control">
           <label className="label">
             <span className="label-text text-[#666666]">Email</span>

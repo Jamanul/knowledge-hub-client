@@ -1,0 +1,34 @@
+
+    [
+      {
+        "id": 1,
+        "name": "Reading Area",
+        "image_url": "https://i.postimg.cc/gjL0k8jw/patrick-robert-doyle-Ov-Xht-wi5-Ew-unsplash.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Computer Club",
+        "image_url": "https://i.postimg.cc/Y9G4jJyq/priscilla-du-preez-Xk-KCui44i-M0-unsplash.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Children's Section",
+        "image_url": "https://i.postimg.cc/Y07pkV5P/anita-jankovic-162ppyjclx-M-unsplash.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Study Room",
+        "image_url": "https://i.postimg.cc/8zQbGbc6/pavan-trikutam-av-J9uz9-Qhcw-unsplash.jpg"
+      },
+      {
+        "id": 5,
+        "name": "Audiovisual Room",
+        "image_url": "https://i.postimg.cc/N0V6N83F/b207ee72356bc0d7a78c16ef4c8a498e.jpg"
+      },
+      {
+        "id": 6,
+        "name": "Reference Section",
+        "image_url": "https://i.postimg.cc/KvFns8HP/745e0a4e281ea1d29a6bed12919bcc29.jpg"
+      }
+    ]
+  
