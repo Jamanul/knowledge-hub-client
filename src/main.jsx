@@ -15,6 +15,7 @@ import AllBooks from './Pages/AllBooks.jsx';
 import BorrowedBooks from './Pages/BorrowedBooks.jsx';
 import AuthProvider from './FirebaseAuth/AuthProvider.jsx';
 import ErrorPage from './Pages/ErrorPage.jsx';
+import PrivateRoute from './Routes/PrivateRoute.jsx';
 
 const router = createBrowserRouter([
   {
@@ -36,7 +37,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/add-books",
-        element:<AddBooks></AddBooks>
+        element:<PrivateRoute><AddBooks></AddBooks></PrivateRoute>
       },
       {
         path:"/all-books",

@@ -34,12 +34,13 @@ const AuthProvider = ({ children }) => {
     const unSubscribe= ()=>{
         onAuthStateChanged(auth,(currentUser)=>{
             setUser(currentUser)
+            setLoading(false)
         })
-        setLoading(false)
+        
     }
     return ()=>unSubscribe()
   },[])
-  const authInfo = {registerUser,loginUser,logoutUser,loading,user,updateUser,loginUserWithGoogle,setUser};
+  const authInfo = {registerUser,loginUser,logoutUser,loading,user,updateUser,loginUserWithGoogle,setUser,setLoading};
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
   );

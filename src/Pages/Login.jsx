@@ -1,10 +1,14 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../FirebaseAuth/AuthProvider';
 import { toast } from 'react-toastify';
 
 const Login = () => {
-    const {loginUser,loginUserWithGoogle}=useContext(AuthContext)
+    const {loginUser,loginUserWithGoogle,user,setLoading}=useContext(AuthContext)
+    const location =useLocation()
+    console.log(location)
+    const navigate =useNavigate()
+    console.log(navigate)
     const handleLogin=(e)=>{
         e.preventDefault()
         const form=e.target;
@@ -13,7 +17,10 @@ const Login = () => {
         loginUser(email,password)
         .then(result=>{
             console.log(result.user)
-            toast.success('Logged in successfully')})
+            toast.success('Logged in successfully')
+            navigate(location.state || '/')
+            
+        }) 
         .catch(error=>{
             console.log(error.message)
             toast.error('User right credentials')
