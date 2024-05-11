@@ -1,7 +1,32 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../FirebaseAuth/AuthProvider';
+import { toast } from 'react-toastify';
 
 const Registration = () => {
+    const {registerUser,updateUser,loading,user}=useContext(AuthContext)
+    const handleRegister =(e)=>{
+        e.preventDefault()
+        const form =e.target;
+        const name =form.yourName.value;
+        const email =form.email.value;
+        const photoUrl=form.photoUrl.value;
+        const password=form.password.value;
+        registerUser(email,password,name,photoUrl)
+        .then(result=>{
+            console.log(result.user)
+            if(loading){
+                return <span className="loading loading-spinner loading-lg"></span>
+            }
+            updateUser(name,photoUrl)
+            .then({...user, displayName: name ,photoURL : photoUrl})
+            toast.success('created a user')
+        })
+        .catch(error=>{
+            console.log(error)
+            toast.error('Something went wrong')
+        })
+    }
     return (
         <div className="hero min-h-screen">
         <div className="hero-content flex-col lg:flex-row-reverse">
@@ -10,7 +35,7 @@ const Registration = () => {
           </div>
           <div className=" py-[70px] flex-1 border rounded-3xl border-[#E17A2A] w-full max-w-sm "> 
            <h1 className="text-5xl text-center text-[#666666] border-b border-[#E17A2A] pb-2 mx-4 font-bold">Register now!</h1>
-            <form className="card-body">
+            <form onSubmit={handleRegister} className="card-body">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text text-[#666666]">Your Name</span>

@@ -1,6 +1,13 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../FirebaseAuth/AuthProvider";
+import { PiUserCircleGearBold } from "react-icons/pi";
 
 const Navbar = () => {
+  const {user,loading,logoutUser}=useContext(AuthContext)
+  const handleLogout =()=>{
+      logoutUser()
+  }
   const links = (
     <>
       <li>
@@ -76,7 +83,7 @@ const Navbar = () => {
           }
           to="/login"
         >
-          login
+          Login
         </NavLink>
       </li>
     </>
@@ -135,10 +142,11 @@ const Navbar = () => {
             className="btn btn-ghost btn-circle avatar"
           >
             <div className="w-10 rounded-full">
-              <img
+              {user ?<img
                 alt="Tailwind CSS Navbar component"
-                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-              />
+                src={ user?.photoURL}
+              /> : <PiUserCircleGearBold className="text-4xl"/>}
+              
             </div>
           </div>
           <ul
@@ -146,20 +154,15 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content mt-3 text-[#666666] z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <a className="justify-between">
-                Profile
-                <span className="badge">New</span>
-              </a>
+              <p className="text-[#666666] hover:text-[#E17A2A] hover:bg-transparent">{user? user.displayName : 'Your Name'}</p>
             </li>
+           
             <li>
-              <a>Settings</a>
-            </li>
-            <li>
-              <a>Logout</a>
+              <p className="text-[#666666] hover:text-[#E17A2A] hover:bg-transparent" onClick={handleLogout}>Log Out</p>
             </li>
           </ul>
         </div>
-        <a className="btn">Button</a>
+      
       </div>
     </div>
   );
