@@ -18,6 +18,7 @@ import ErrorPage from './Pages/ErrorPage.jsx';
 import PrivateRoute from './Routes/PrivateRoute.jsx';
 import RowView from './Components/RowView.jsx';
 import CardView from './Components/CardView.jsx';
+import UpdatePage from './Pages/UpdatePage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -46,7 +47,7 @@ const router = createBrowserRouter([
         element:<PrivateRoute><AllBooks></AllBooks></PrivateRoute>,
         children:[
           {
-            path:'/all-books/row-view',
+            path:'/all-books',
             element:<RowView></RowView>
           },
           {
@@ -56,8 +57,13 @@ const router = createBrowserRouter([
         ]
       },
       {
-        path:"borrowed-books",
+        path:"/borrowed-books",
         element:<PrivateRoute><BorrowedBooks></BorrowedBooks></PrivateRoute>
+      },
+      {
+        path:"/updatePage/:id",
+        element:<UpdatePage></UpdatePage>,
+        loader:({params})=>fetch(`http://localhost:5000/all-books/${params.id}`)
       }
     ]
   },

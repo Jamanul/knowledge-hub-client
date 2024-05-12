@@ -12,7 +12,7 @@ const AllBooks = () => {
                 sort
             </div>
             <div>
-                <button className="btn text-3xl mr-2"><Link to='/all-books/row-view'><CiViewList></CiViewList></Link></button>
+                <button className="btn text-3xl mr-2"><Link to='/all-books'><CiViewList></CiViewList></Link></button>
                 <button className="btn text-3xl"><Link to='/all-books/card-view'><FaBoxes></FaBoxes></Link></button>
             </div>
         </div>
