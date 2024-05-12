@@ -16,6 +16,8 @@ import BorrowedBooks from './Pages/BorrowedBooks.jsx';
 import AuthProvider from './FirebaseAuth/AuthProvider.jsx';
 import ErrorPage from './Pages/ErrorPage.jsx';
 import PrivateRoute from './Routes/PrivateRoute.jsx';
+import RowView from './Components/RowView.jsx';
+import CardView from './Components/CardView.jsx';
 
 const router = createBrowserRouter([
   {
@@ -41,11 +43,21 @@ const router = createBrowserRouter([
       },
       {
         path:"/all-books",
-        element:<AllBooks></AllBooks>
+        element:<PrivateRoute><AllBooks></AllBooks></PrivateRoute>,
+        children:[
+          {
+            path:'/all-books/row-view',
+            element:<RowView></RowView>
+          },
+          {
+            path:"/all-books/card-view",
+            element:<CardView></CardView>
+          }
+        ]
       },
       {
         path:"borrowed-books",
-        element:<BorrowedBooks></BorrowedBooks>
+        element:<PrivateRoute><BorrowedBooks></BorrowedBooks></PrivateRoute>
       }
     ]
   },

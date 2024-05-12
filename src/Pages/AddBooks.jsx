@@ -1,6 +1,35 @@
+import axios from "axios";
 import React from "react";
+import { toast } from "react-toastify";
 
 const AddBooks = () => {
+    const handleAddBook = (e)=>{
+        e.preventDefault()
+        const form =e.target
+        const bookName =form.bookName.value;
+        const authorName =form.authorName.value;
+        const bookUrl =form.bookUrl.value;
+        const bookQuantity =form.bookQuantity.value;
+        const bookRating =form.bookRating.value;
+        const description =form.shortDescription.value
+        const about =form.longDescription.value
+        const bookCategory =form.bookCategory.value
+        const book ={
+            name: bookName,
+            image_url: bookUrl,
+            quantity :bookQuantity,
+            author : authorName,
+            rating : bookRating,
+            short_description: description,
+            long_description : about,
+            category: bookCategory
+        }
+        console.log(book)
+        axios.post('http://localhost:5000/all-books',book)
+        .then(data=>{console.log(data.data)
+        toast.success('You added a book')
+        })
+    }
   return (
     <div className="min-h-screen">
       <div className="hero-content border border-[#E17A2A] rounded-3xl">
@@ -8,7 +37,7 @@ const AddBooks = () => {
           <h1 className="text-5xl text-[#666666] border-b pb-2 text-center mx-96 border-[#E17A2A]">
             Add A Book
           </h1>
-          <form className="card-body">
+          <form onSubmit={handleAddBook} className="card-body">
             <div className="flex gap-6">
             <div className="form-control w-1/2">
               <label className="label">
