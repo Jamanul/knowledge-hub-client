@@ -1,8 +1,18 @@
 import axios from "axios";
 import React from "react";
+import { useLoaderData } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const UpdatePage = () => {
+    const book =useLoaderData()
+    const {_id,name,
+        image_url,
+        quantity,
+        author,
+        rating,
+        short_description,
+        long_description,
+        category}=book;
     const handleUpdateBook = (e)=>{
         e.preventDefault()
         const form =e.target
@@ -25,9 +35,9 @@ const UpdatePage = () => {
             category: bookCategory
         }
         console.log(book)
-        axios.put('http://localhost:5000/all-books',book)
+        axios.put(`http://localhost:5000/all-books/${_id}`,book)
         .then(data=>{console.log(data.data)
-        toast.success('You added a book')
+        toast.success('You updated a book')
         })
     }
     return (
@@ -35,7 +45,7 @@ const UpdatePage = () => {
         <div className="hero-content border border-[#E17A2A] rounded-3xl">
           <div className="w-full">
             <h1 className="text-5xl text-[#666666] border-b pb-2 text-center mx-96 border-[#E17A2A]">
-              Add A Book
+              Update A Book
             </h1>
             <form onSubmit={handleUpdateBook} className="card-body">
               <div className="flex gap-6">
@@ -47,6 +57,7 @@ const UpdatePage = () => {
                   type="text"
                   name="bookName"
                   placeholder="Book Name"
+                  defaultValue={name}
                   className="input input-bordered border-[#E17A2A] text-[#666666]"
                   required
                 />
@@ -58,6 +69,7 @@ const UpdatePage = () => {
                 <input
                   type="text"
                   name="authorName"
+                  defaultValue={author}
                   placeholder="Author Name"
                   className="input input-bordered border-[#E17A2A] text-[#666666]"
                   required
@@ -74,6 +86,7 @@ const UpdatePage = () => {
                 <input
                   type="text"
                   name="bookUrl"
+                  defaultValue={image_url}
                   placeholder="Book photo Url"
                   className="input input-bordered border-[#E17A2A] text-[#666666]"
                   required
@@ -88,6 +101,7 @@ const UpdatePage = () => {
                 <input
                   type="number"
                   name="bookQuantity"
+                  defaultValue={quantity}
                   placeholder="Book Quantity"
                   className="input input-bordered border-[#E17A2A] text-[#666666]"
                   required
@@ -100,7 +114,7 @@ const UpdatePage = () => {
                     Book  Category
                   </span>
                 </div>
-                <select name='bookCategory' className="select text-[#666666] border-[#E17A2A] select-bordered">
+                <select name='bookCategory' defaultValue={category} className="select text-[#666666] border-[#E17A2A] select-bordered">
                   <option disabled selected>
                     Pick one
                   </option>
@@ -119,7 +133,7 @@ const UpdatePage = () => {
                     Book Rating
                   </span>
                 </div>
-                <select name='bookRating' className="select text-[#666666] border-[#E17A2A] select-bordered">
+                <select name='bookRating' defaultValue={rating} className="select text-[#666666] border-[#E17A2A] select-bordered">
                   <option disabled selected>
                     Pick one
                   </option>
@@ -140,6 +154,7 @@ const UpdatePage = () => {
                 </label>
                 <input
                   type="text"
+                  defaultValue={short_description}
                   name="shortDescription"
                   placeholder="description"
                   className="input input-bordered border-[#E17A2A] text-[#666666]"
@@ -152,6 +167,7 @@ const UpdatePage = () => {
                 </label>
                 <input
                   type="text"
+                  defaultValue={long_description}
                   name="longDescription"
                   placeholder="About"
                   className="input input-bordered border-[#E17A2A] text-[#666666]"

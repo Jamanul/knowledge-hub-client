@@ -26,8 +26,7 @@ const CardView = () => {
                   <h2 className='text-[#666666] text-xl'><span className='text-2xl'>Category:</span> {book.category}</h2>
                   <h2 className='text-[#666666] text-xl flex gap-4'><span className='text-2xl'>Rating: </span>  <Rating style={{ maxWidth: 100 }} value={book.rating} onChange={setRating} readOnly /></h2>
                   <div className="card-actions justify-end">
-                  <button className="btn bg-[#666666] text-[#fc984c] font-bold"><Link to={`/updatePage/${book._id}`}></Link></button>
-
+                  <button className="btn bg-[#666666] text-[#fc984c] font-bold"><Link to={`/updatePage/${book._id}`}>Update</Link></button>
                   </div>
                 </div>
                 </div>

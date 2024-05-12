@@ -1,6 +1,7 @@
 import { Rating } from '@smastrom/react-rating';
 import '@smastrom/react-rating/style.css'
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const RowView = () => {
     const [bookData,setBookData]=useState([])
@@ -37,7 +38,7 @@ const RowView = () => {
                 <td className='text-[#666666]'>{book.author}</td>
                 <td className='text-[#666666]'>{book.category}</td>
                 <td className='text-[#666666]'> <Rating style={{ maxWidth: 100 }} value={book.rating} onChange={setRating} readOnly /></td>
-                <td><button className="btn bg-[#666666] text-[#fc984c] font-bold">Update</button></td>
+                <td> <button className="btn bg-[#666666] text-[#fc984c] font-bold"><Link to={`/updatePage/${book._id}`}>Update</Link></button></td>
             </tr>
         )
       }

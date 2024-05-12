@@ -62,7 +62,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/updatePage/:id",
-        element:<UpdatePage></UpdatePage>,
+        element:<PrivateRoute><UpdatePage></UpdatePage></PrivateRoute>,
         loader:({params})=>fetch(`http://localhost:5000/all-books/${params.id}`)
       }
     ]
