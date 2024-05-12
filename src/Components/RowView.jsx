@@ -31,12 +31,12 @@ const RowView = () => {
       {
         bookData.map((book,idx)=>
             <tr key={book._id}>
-                <th>{idx+1}</th>
-                <td><img className='w-10' src={book.image_url} alt="" /></td>
-                <td>{book.name}</td>
-                <td>{book.author}</td>
-                <td>{book.category}</td>
-                <td> <Rating style={{ maxWidth: 100 }} value={book.rating} onChange={setRating} readOnly /></td>
+                <th className='text-[#666666]'>{idx+1}</th>
+                <td className='text-[#666666]'><img className='w-10' src={book.image_url} alt="" /></td>
+                <td className='text-[#666666]'>{book.name}</td>
+                <td className='text-[#666666]'>{book.author}</td>
+                <td className='text-[#666666]'>{book.category}</td>
+                <td className='text-[#666666]'> <Rating style={{ maxWidth: 100 }} value={book.rating} onChange={setRating} readOnly /></td>
                 <td><button className="btn bg-[#666666] text-[#fc984c] font-bold">Update</button></td>
             </tr>
         )

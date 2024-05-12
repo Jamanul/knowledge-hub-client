@@ -7,7 +7,7 @@ const AllBooks = () => {
              <h1 className="text-5xl text-[#666666] border-b pb-2 text-center mx-96 border-[#E17A2A]">
             View AllBooks Books
         </h1>
-        <div className="flex justify-end mt-12">
+        <div className="flex justify-end mt-12 mb-6">
             <div>
                 <button className="btn text-3xl mr-2"><Link to='/all-books/row-view'><CiViewList></CiViewList></Link></button>
                 <button className="btn text-3xl"><Link to='/all-books/card-view'><FaBoxes></FaBoxes></Link></button>
