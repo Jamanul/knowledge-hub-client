@@ -19,6 +19,7 @@ import PrivateRoute from './Routes/PrivateRoute.jsx';
 import RowView from './Components/RowView.jsx';
 import CardView from './Components/CardView.jsx';
 import UpdatePage from './Pages/UpdatePage.jsx';
+import CategoryPage from './Pages/CategoryPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -64,6 +65,10 @@ const router = createBrowserRouter([
         path:"/updatePage/:id",
         element:<PrivateRoute><UpdatePage></UpdatePage></PrivateRoute>,
         loader:({params})=>fetch(`http://localhost:5000/all-books/${params.id}`)
+      },
+      {
+        path:"/category-page/:id",
+        element:<CategoryPage></CategoryPage>,
       }
     ]
   },
