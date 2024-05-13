@@ -12,7 +12,7 @@ const SubCategory = () => {
     <div>
       <div className="text-center">
         <h1 className="text-4xl text-[#666666]">
-          Books By 
+          Books By {" "}
           <span
             className="text-[#E17A2A]"
           >
