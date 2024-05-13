@@ -3,10 +3,12 @@ import { Rating } from "@smastrom/react-rating";
 import { Link } from "react-router-dom";
 
 import '@smastrom/react-rating/style.css'
-import { useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { AuthContext } from "../FirebaseAuth/AuthProvider";
 import axios from "axios";
 import { toast } from "react-toastify";
+import BorrowedBookCard from "../Components/BorrowedBookCard";
+
 const DetailsPage = () => {
     
     const {user} =useContext(AuthContext)
@@ -25,6 +27,7 @@ const DetailsPage = () => {
             const form =e.target
             const userName =form.userName.value
             const email =form.email.value
+            const borrowedDate=form.borrowedDate.value
             const returnDate =form.returnDate.value
             const borrowedBook={
                 userName,
@@ -38,6 +41,7 @@ const DetailsPage = () => {
                 short_description,
                 long_description,
                 category,
+                borrowedDate
             }
             console.log(borrowedBook)
             axios.post('http://localhost:5000/all-borrowed-books',borrowedBook)
@@ -45,11 +49,12 @@ const DetailsPage = () => {
                 //console.log(data.data)
                
                 toast.success('You have borrowed a book.'),
-                setBookQuantity(bookQuantity-1)
+                
                 
             )
-            axios.patch(`http://localhost:5000/all-books/${_id}`,{quantity})
+            axios.patch(`http://localhost:5000/all-returned-books/${_id}`,{quantity})
             .then(data=>{console.log(data.data)
+                setBookQuantity(bookQuantity-1)
             // if(data.data.modifiedCount){
             //     toast.success('You have borrowed a book.')
             // }
@@ -94,6 +99,12 @@ const DetailsPage = () => {
                         </div>
                         <div className="form-control">
                         <label className="label">
+                            <span className="label-text text-[#666666]">Borrowed Date</span>
+                        </label>
+                        <input type="date" name='borrowedDate' placeholder="Borrowed Date" className="input input-bordered text-[#666666]" required />
+                        </div>
+                        <div className="form-control">
+                        <label className="label">
                             <span className="label-text text-[#666666]">Return Date</span>
                         </label>
                         <input type="date" name='returnDate' placeholder="Return Date" className="input input-bordered text-[#666666]" required />
@@ -111,6 +122,7 @@ const DetailsPage = () => {
                    { }
                 </div>
             </div>
+   
         </div>
     );
 };
