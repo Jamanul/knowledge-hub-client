@@ -37,7 +37,9 @@ const UpdatePage = () => {
         console.log(book)
         axios.put(`http://localhost:5000/all-books/${_id}`,book)
         .then(data=>{console.log(data.data)
-        toast.success('You updated a book')
+        if(data.data.modifiedCount>0){
+          toast.success('you have successfully modified the book.')
+        }
         })
     }
     return (

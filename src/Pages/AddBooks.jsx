@@ -14,12 +14,14 @@ const AddBooks = () => {
         const description =form.shortDescription.value
         const about =form.longDescription.value
         const bookCategory =form.bookCategory.value
+        const bookQuantity2 =parseInt(bookQuantity)
+        const bookRating2 =parseInt(bookRating)
         const book ={
             name: bookName,
             image_url: bookUrl,
-            quantity :bookQuantity,
+            quantity :bookQuantity2,
             author : authorName,
-            rating : bookRating,
+            rating : bookRating2,
             short_description: description,
             long_description : about,
             category: bookCategory
@@ -27,7 +29,10 @@ const AddBooks = () => {
         console.log(book)
         axios.post('http://localhost:5000/all-books',book)
         .then(data=>{console.log(data.data)
-        toast.success('You added a book')
+          if(data.data.acknowledged){
+            toast.success('You added a book')
+          }
+        
         })
     }
   return (

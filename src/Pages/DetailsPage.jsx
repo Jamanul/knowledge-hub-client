@@ -3,12 +3,15 @@ import { Rating } from "@smastrom/react-rating";
 import { Link } from "react-router-dom";
 
 import '@smastrom/react-rating/style.css'
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../FirebaseAuth/AuthProvider";
+import axios from "axios";
+import { toast } from "react-toastify";
 const DetailsPage = () => {
+    
     const {user} =useContext(AuthContext)
     const singleBook =useLoaderData()
-    const {_id,name,
+    let {_id,name,
         image_url,
         quantity,
         author,
@@ -16,9 +19,9 @@ const DetailsPage = () => {
         short_description,
         long_description,
         category} =singleBook
-
+        const [bookQuantity,setBookQuantity]=useState(quantity)
         const handleBorrowBooks =(e)=>{
-            
+            e.preventDefault()
             const form =e.target
             const userName =form.userName.value
             const email =form.email.value
@@ -28,16 +31,32 @@ const DetailsPage = () => {
                 email,
                 returnDate,
                 name,
-        image_url,
-        quantity,
-        author,
-        rating,
-        short_description,
-        long_description,
-        category
+                image_url,
+                quantity,
+                author,
+                rating,
+                short_description,
+                long_description,
+                category,
             }
             console.log(borrowedBook)
+            axios.post('http://localhost:5000/all-borrowed-books',borrowedBook)
+            .then(
+                //console.log(data.data)
+               
+                toast.success('You have borrowed a book.'),
+                setBookQuantity(bookQuantity-1)
+                
+            )
+            axios.patch(`http://localhost:5000/all-books/${_id}`,{quantity})
+            .then(data=>{console.log(data.data)
+            // if(data.data.modifiedCount){
+            //     toast.success('You have borrowed a book.')
+            // }
+            })
+            //toast.success("You have borrowed a book.")
         }
+        
     return (
         <div>
             <div className="flex gap-6 flex-col lg:flex-row">
@@ -55,14 +74,11 @@ const DetailsPage = () => {
 
                 <div className="flex justify-between">
                     <div>
-                    <h2 className='text-[#E17A2A] text-xl'><span className='text-2xl text-[#666666]'>Available Books: </span>{quantity}</h2>
+                    <h2 className='text-[#E17A2A] text-xl'><span className='text-2xl text-[#666666]'>Available Books: </span>{bookQuantity}</h2>
                     </div>
-                <a href="#my_modal_8" className="btn bg-[#666666] text-[#fc984c] font-bold">Borrow</a>
-                    {/* Put this part before </body> tag */}
-                    <div className="modal" role="dialog" id="my_modal_8">
+                    <button className={`${bookQuantity>0? '':'btn-disabled'} btn bg-[#666666] text-[#fc984c] font-bold`} onClick={()=>document.getElementById('my_modal_2').showModal()}>Borrow Book</button>
+                    <dialog id="my_modal_2" className="modal">
                     <div className="modal-box">
-                        
-
                     <form onSubmit={handleBorrowBooks} className="card-body">
                         <div className="form-control">
                         <label className="label">
@@ -87,9 +103,12 @@ const DetailsPage = () => {
                         </div>
                     </form>
                     </div>
-                    </div>
+                    <form method="dialog" className="modal-backdrop">
+                    <button>close</button>
+                    </form>
+                    </dialog>
                 </div>
-                   
+                   { }
                 </div>
             </div>
         </div>
