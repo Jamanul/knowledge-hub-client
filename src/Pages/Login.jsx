@@ -6,9 +6,9 @@ import { toast } from 'react-toastify';
 const Login = () => {
     const {loginUser,loginUserWithGoogle,user,setLoading}=useContext(AuthContext)
     const location =useLocation()
-    console.log(location)
+    //console.log(location)
     const navigate =useNavigate()
-    console.log(navigate)
+    //console.log(navigate)
     const handleLogin=(e)=>{
         e.preventDefault()
         const form=e.target;
@@ -16,13 +16,14 @@ const Login = () => {
         const password=form.password.value
         loginUser(email,password)
         .then(result=>{
-            console.log(result.user)
+            //console.log(result.user)
             toast.success('Logged in successfully')
+            setLoading(false)
             navigate(location.state || '/')
             
         }) 
         .catch(error=>{
-            console.log(error.message)
+            //console.log(error.message)
             toast.error('User right credentials')
         })
     }

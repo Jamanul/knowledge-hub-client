@@ -8,7 +8,7 @@ const BorrowedBooks = () => {
     const {user}= useContext(AuthContext)
     const [borrowedBooksData,setBorrowedBooksData]=useState([])
     useEffect(()=>{
-        axios.get(`http://localhost:5000/all-borrowed-books?email=${user.email}`)
+        axios.get(`https://knowledge-hub-server-jkskb25-gmailcom-jamanul-sakibs-projects.vercel.app/all-borrowed-books?email=${user.email}`)
         .then(data=>setBorrowedBooksData(data.data))
     },[user.email])
     console.log(borrowedBooksData)

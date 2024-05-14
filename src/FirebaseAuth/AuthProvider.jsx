@@ -34,23 +34,31 @@ const AuthProvider = ({ children }) => {
   useEffect(()=>{
     const unSubscribe= ()=>{
         onAuthStateChanged(auth,(currentUser)=>{
+          setLoading(false)
           setUser(currentUser)
           const userEmail =   currentUser?.email || user?.email
           const loggedUser = {email:userEmail}
+
           if(currentUser){
-               axios.post('http://localhost:5000/jwt',loggedUser,{withCredentials:true})
-          .then(res=>console.log(res.data))
+               axios.post('https://knowledge-hub-server-jkskb25-gmailcom-jamanul-sakibs-projects.vercel.app/jwt',loggedUser,{withCredentials:true})
+          .then(res=>{console.log(res.data)
+            
+          })
+          setLoading(false)
           }
           else{
-              axios.post('http://localhost:5000/logout',loggedUser,{withCredentials:true})
-              .then(res=>console.log(res.data))
+              axios.post('https://knowledge-hub-server-jkskb25-gmailcom-jamanul-sakibs-projects.vercel.app/logout',loggedUser,{withCredentials:true})
+              .then(res=>{console.log(res.data)
+               
+              })
+              setLoading(false)
           }
           setLoading(false)
+          console.log(loading)
         })
-        
     }
     return ()=>unSubscribe()
-  },[])
+  },[loading, user?.email])
   const authInfo = {registerUser,loginUser,logoutUser,loading,user,updateUser,loginUserWithGoogle,setUser,setLoading};
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>

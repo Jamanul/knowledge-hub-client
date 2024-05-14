@@ -44,11 +44,11 @@ const DetailsPage = () => {
                 borrowedDate
             }
             console.log(borrowedBook)
-            axios.post('http://localhost:5000/all-borrowed-books',borrowedBook)
+            axios.post('https://knowledge-hub-server-jkskb25-gmailcom-jamanul-sakibs-projects.vercel.app/all-borrowed-books',borrowedBook)
             .then(
                 //console.log(data.data)
             )
-            axios.patch(`http://localhost:5000/all-returned-books/${_id}`,borrowedBook)
+            axios.patch(`https://knowledge-hub-server-jkskb25-gmailcom-jamanul-sakibs-projects.vercel.app/all-returned-books/${_id}`,borrowedBook)
             .then(data=>{console.log(data.data)
                 
             if(data.data.modifiedCount){

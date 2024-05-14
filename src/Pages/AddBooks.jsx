@@ -29,7 +29,7 @@ const AddBooks = () => {
             category: bookCategory
         }
         console.log(book)
-        axiosSecure.post('http://localhost:5000/all-books',book)
+        axiosSecure.post('https://knowledge-hub-server-jkskb25-gmailcom-jamanul-sakibs-projects.vercel.app/all-books',book)
         .then(data=>{console.log(data.data)
           if(data.data.acknowledged){
             toast.success('You added a book')

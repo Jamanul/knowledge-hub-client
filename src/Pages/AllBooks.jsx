@@ -10,7 +10,7 @@ const AllBooks = () => {
     const axiosSecure =useAxiosSecure()
     useEffect(()=>{
         const url ='/all-books-test'
-        // fetch('http://localhost:5000/all-books')
+        // fetch('https://knowledge-hub-server-jkskb25-gmailcom-jamanul-sakibs-projects.vercel.app/all-books')
         // .then(res=>res.json())
         // .then(data=>{setBookData(data)
         // setFilteredBooks(data)
@@ -22,15 +22,15 @@ const AllBooks = () => {
     const handleFilter =(data)=>{
         if(data === 'all'){
             setFilteredBooks(bookData)
-            console.log('all')
+            //console.log('all')
         }
         if(data === 'available'){
             const availableBooks = bookData.filter(singleData=>singleData.quantity!==0)
             setFilteredBooks(availableBooks)
-            console.log('available')
+            //console.log('available')
         }
     }
-    console.log(bookData)
+    //console.log(bookData)
   return (
     <div>
       <h1 className="text-5xl text-[#666666] border-b pb-2 text-center mx-96 border-[#E17A2A]">

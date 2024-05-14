@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 
 const axiosSecure = axios.create({
-    baseURL: 'http://localhost:5000',
+    baseURL: 'https://knowledge-hub-server-jkskb25-gmailcom-jamanul-sakibs-projects.vercel.app',
     withCredentials: true
 })
 
@@ -18,8 +18,7 @@ const useAxiosSecure = () => {
         },(error)=>{
             if(error.response.status ===401 ||error.response.status ===403){
                 logoutUser()
-                .then(()=>{
-                    
+                .then(()=>{  
                     navigate('/login')
                 })
             }

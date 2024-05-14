@@ -37,7 +37,7 @@ const UpdatePage = () => {
             category: bookCategory
         }
         console.log(book)
-        axios.put(`http://localhost:5000/all-books/${_id}`,book)
+        axios.put(`https://knowledge-hub-server-jkskb25-gmailcom-jamanul-sakibs-projects.vercel.app/all-books/${_id}`,book)
         .then(data=>{console.log(data.data)
         if(data.data.modifiedCount>0){
           toast.success('you have successfully modified the book.')

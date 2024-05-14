@@ -13,13 +13,13 @@ const BorrowedBookCard = ({singleBook,setBorrowedBooksData,borrowedBooksData}) =
         category,returnDate,borrowedDate} =singleBook
         const handleReturnBook =(id,singleBook)=>{
             console.log(singleBook)
-            axios.patch(`http://localhost:5000/all-returned-books-test/${id}`,singleBook)
+            axios.patch(`https://knowledge-hub-server-jkskb25-gmailcom-jamanul-sakibs-projects.vercel.app/all-returned-books-test/${id}`,singleBook)
             .then(data=>{console.log(data.data)
             // if(data.data.modifiedCount){
             //     toast.success('You have borrowed a book.')
             // }
             })
-           axios.delete(`http://localhost:5000/all-borrowed-books/${id}`)
+           axios.delete(`https://knowledge-hub-server-jkskb25-gmailcom-jamanul-sakibs-projects.vercel.app/all-borrowed-books/${id}`)
            .then(data=>{console.log(data.data)
             if(data.data.deletedCount>0){
                 toast.success('you have returned your book.')

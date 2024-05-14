@@ -15,7 +15,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 const HomeBanner = () => { 
     const [libraryParts,setLibraryParts]=useState([])
     useEffect(()=>{
-      fetch('http://localhost:5000/all-banner')
+      fetch('https://knowledge-hub-server-jkskb25-gmailcom-jamanul-sakibs-projects.vercel.app/all-banner')
         .then(res=>res.json())
         .then(data=>setLibraryParts(data))
     },[])
