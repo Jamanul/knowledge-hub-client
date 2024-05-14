@@ -2,17 +2,23 @@ import { createContext, useEffect, useState } from "react";
 import { CiViewList } from "react-icons/ci";
 import { FaBoxes } from "react-icons/fa";
 import { Link, Outlet, useLoaderData } from "react-router-dom";
+import useAxiosSecure from "../Hooks/useAxiosSecure";
 
 const AllBooks = () => {
     const [bookData,setBookData]=useState([])
     const [filteredBooks,setFilteredBooks] =useState([])
+    const axiosSecure =useAxiosSecure()
     useEffect(()=>{
-        fetch('http://localhost:5000/all-books')
-        .then(res=>res.json())
-        .then(data=>{setBookData(data)
-        setFilteredBooks(data)
+        const url ='/all-books-test'
+        // fetch('http://localhost:5000/all-books')
+        // .then(res=>res.json())
+        // .then(data=>{setBookData(data)
+        // setFilteredBooks(data)
+        axiosSecure.get(url)
+        .then(res=>{setBookData(res.data)
+          setFilteredBooks(res.data)
         })
-    },[])
+    },[axiosSecure])
     const handleFilter =(data)=>{
         if(data === 'all'){
             setFilteredBooks(bookData)

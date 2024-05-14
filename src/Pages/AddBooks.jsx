@@ -1,8 +1,10 @@
 import axios from "axios";
 import React from "react";
 import { toast } from "react-toastify";
+import useAxiosSecure from "../Hooks/useAxiosSecure";
 
 const AddBooks = () => {
+  const axiosSecure =useAxiosSecure()
     const handleAddBook = (e)=>{
         e.preventDefault()
         const form =e.target
@@ -27,7 +29,7 @@ const AddBooks = () => {
             category: bookCategory
         }
         console.log(book)
-        axios.post('http://localhost:5000/all-books',book)
+        axiosSecure.post('http://localhost:5000/all-books',book)
         .then(data=>{console.log(data.data)
           if(data.data.acknowledged){
             toast.success('You added a book')

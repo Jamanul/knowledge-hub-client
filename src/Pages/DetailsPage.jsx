@@ -47,17 +47,17 @@ const DetailsPage = () => {
             axios.post('http://localhost:5000/all-borrowed-books',borrowedBook)
             .then(
                 //console.log(data.data)
-               
-                toast.success('You have borrowed a book.'),
-                
-                
             )
-            axios.patch(`http://localhost:5000/all-returned-books/${_id}`,{quantity})
+            axios.patch(`http://localhost:5000/all-returned-books/${_id}`,borrowedBook)
             .then(data=>{console.log(data.data)
+                
+            if(data.data.modifiedCount){
+                toast.success('You have borrowed a book.')
                 setBookQuantity(bookQuantity-1)
-            // if(data.data.modifiedCount){
-            //     toast.success('You have borrowed a book.')
-            // }
+            }
+            else{
+                toast.error('you already have borrowed the book.')}
+            
             })
             //toast.success("You have borrowed a book.")
         }
