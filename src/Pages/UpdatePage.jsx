@@ -24,12 +24,14 @@ const UpdatePage = () => {
         const description =form.shortDescription.value
         const about =form.longDescription.value
         const bookCategory =form.bookCategory.value
+        const bookQuantity2 =parseInt(bookQuantity)
+        const bookRating2 =parseInt(bookRating)
         const book ={
             name: bookName,
             image_url: bookUrl,
-            quantity :bookQuantity,
+            quantity :bookQuantity2,
             author : authorName,
-            rating : bookRating,
+            rating : bookRating2,
             short_description: description,
             long_description : about,
             category: bookCategory

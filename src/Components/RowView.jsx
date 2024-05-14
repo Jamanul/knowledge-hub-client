@@ -1,17 +1,13 @@
 import { Rating } from '@smastrom/react-rating';
 import '@smastrom/react-rating/style.css'
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useOutletContext } from 'react-router-dom';
 
 const RowView = () => {
-    const [bookData,setBookData]=useState([])
+  const [filteredBooks]=useOutletContext()
     const [rating, setRating] = useState(0)
-    useEffect(()=>{
-        fetch('http://localhost:5000/all-books')
-        .then(res=>res.json())
-        .then(data=>setBookData(data))
-    },[])
-    console.log(bookData)
+   
+    console.log(filteredBooks)
     return (
         <div>
             <div className="overflow-x-auto">
@@ -30,7 +26,7 @@ const RowView = () => {
     </thead>
     <tbody>
       {
-        bookData.map((book,idx)=>
+        filteredBooks.map((book,idx)=>
             <tr key={book._id}>
                 <th className='text-[#666666]'>{idx+1}</th>
                 <td className='text-[#666666]'><img className='w-10' src={book.image_url} alt="" /></td>

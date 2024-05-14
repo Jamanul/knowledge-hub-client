@@ -1,21 +1,17 @@
 import { Rating } from '@smastrom/react-rating';
 import '@smastrom/react-rating/style.css'
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useOutletContext } from 'react-router-dom';
 
 const CardView = () => {
-    const [bookData,setBookData]=useState([])
+    const [filteredBooks]=useOutletContext()
+    console.log(filteredBooks)
     const [rating, setRating] = useState(0)
-    useEffect(()=>{
-        fetch('http://localhost:5000/all-books')
-        .then(res=>res.json())
-        .then(data=>setBookData(data))
-    },[])
-    console.log(bookData)
+   
     return (
         <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 '>
             {
-                bookData.map(book=><div key={book._id} className="card w-96 shadow-xl">
+                filteredBooks.map(book=><div key={book._id} className="card w-96 shadow-xl">
                 <div className='flex flex-col'>
                     
                 <figure className='p-4 w-96 h-[500px] flex-grow'><img src={book.image_url} alt="Shoes" /></figure>
