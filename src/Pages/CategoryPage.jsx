@@ -7,7 +7,7 @@ const CategoryPage = () => {
     const category= useParams()
     //console.log(category.id)
     useEffect(()=>{
-        fetch(`https://knowledge-hub-server-jkskb25-gmailcom-jamanul-sakibs-projects.vercel.app/all-books?category=${category.id}`)
+        fetch(`https://knowledge-hub-server-rho.vercel.app/all-books?category=${category.id}`)
         .then(res=>res.json())
         .then(data=>setCategoryData(data))
     },[category.id])

@@ -36,9 +36,10 @@ const UpdatePage = () => {
             long_description : about,
             category: bookCategory
         }
-        console.log(book)
-        axios.put(`https://knowledge-hub-server-jkskb25-gmailcom-jamanul-sakibs-projects.vercel.app/all-books/${_id}`,book)
-        .then(data=>{console.log(data.data)
+        //console.log(book)
+        axios.put(`https://knowledge-hub-server-rho.vercel.app/all-books/${_id}`,book)
+        .then(data=>{
+          //console.log(data.data)
         if(data.data.modifiedCount>0){
           toast.success('you have successfully modified the book.')
         }

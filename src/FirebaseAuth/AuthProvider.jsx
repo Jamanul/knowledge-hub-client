@@ -8,8 +8,10 @@ export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+
   const googleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
+
   const registerUser = (email, password) => {
     setLoading(true)
     return createUserWithEmailAndPassword(auth, email, password)
@@ -37,33 +39,33 @@ const AuthProvider = ({ children }) => {
     })
   }
   useEffect(()=>{
-    const unSubscribe= ()=>{
-        onAuthStateChanged(auth,(currentUser)=>{
-          setLoading(false)
-          setUser(currentUser)
-          const userEmail =   currentUser?.email || user?.email
+    const unSubscribe = onAuthStateChanged(auth,(currentUser)=>{
+          // setLoading(false)
+           //setUser(currentUser)
+          const userEmail =   currentUser?.email
           const loggedUser = {email:userEmail}
 
           if(currentUser){
-               axios.post('https://knowledge-hub-server-jkskb25-gmailcom-jamanul-sakibs-projects.vercel.app/jwt',loggedUser,{withCredentials:true})
-          .then(res=>{console.log(res.data)
-            
+               axios.post('https://knowledge-hub-server-rho.vercel.app/jwt',loggedUser,{withCredentials:true})
+          .then(res=>{
+            console.log(res.data)
+            setUser(currentUser)
+            setLoading(false)
           })
-          setLoading(false)
           }
           else{
-              axios.post('https://knowledge-hub-server-jkskb25-gmailcom-jamanul-sakibs-projects.vercel.app/logout',loggedUser,{withCredentials:true})
+              axios.post('https://knowledge-hub-server-rho.vercel.app/logout',loggedUser,{withCredentials:true})
               .then(res=>{console.log(res.data)
-               
+                setUser(null)
+                setLoading(false)
               })
-              setLoading(false)
           }
-          setLoading(false)
-          console.log(loading)
+
         })
-    }
+    
     return ()=>unSubscribe()
-  },[loading, user?.email])
+  },[])
+  
   const authInfo = {registerUser,loginUser,logoutUser,loading,user,updateUser,loginUserWithGoogle,setUser,setLoading,loginUserWithGithub};
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>

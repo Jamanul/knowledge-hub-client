@@ -5,7 +5,7 @@ import { Link, useOutletContext } from 'react-router-dom';
 
 const CardView = () => {
     const [filteredBooks]=useOutletContext()
-    console.log(filteredBooks)
+    //console.log(filteredBooks)
     const [rating, setRating] = useState(0)
    
     return (

@@ -7,7 +7,7 @@ const RowView = () => {
   const [filteredBooks]=useOutletContext()
     const [rating, setRating] = useState(0)
    
-    console.log(filteredBooks)
+    //console.log(filteredBooks)
     return (
         <div>
             <div className="overflow-x-auto">

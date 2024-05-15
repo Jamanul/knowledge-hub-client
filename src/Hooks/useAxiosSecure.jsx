@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 
 const axiosSecure = axios.create({
-    baseURL: 'https://knowledge-hub-server-jkskb25-gmailcom-jamanul-sakibs-projects.vercel.app',
+    baseURL: 'https://knowledge-hub-server-rho.vercel.app',
     withCredentials: true
 })
 

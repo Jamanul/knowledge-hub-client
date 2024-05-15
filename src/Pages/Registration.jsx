@@ -24,7 +24,7 @@ const Registration = () => {
        
         registerUser(email,password,name,photoUrl)
         .then(result=>{
-            console.log(result.user)
+            //console.log(result.user)
             
             updateUser(name,photoUrl)
             setUser({...user,displayName:name,photoURL:photoUrl})
@@ -34,7 +34,7 @@ const Registration = () => {
             
         })
         .catch(error=>{
-            console.log(error)
+            //console.log(error)
             toast.error('Something went wrong')
         })
     }

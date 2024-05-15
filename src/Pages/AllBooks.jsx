@@ -10,7 +10,7 @@ const AllBooks = () => {
     const axiosSecure =useAxiosSecure()
     useEffect(()=>{
         const url ='/all-books-test'
-        // fetch('https://knowledge-hub-server-jkskb25-gmailcom-jamanul-sakibs-projects.vercel.app/all-books')
+        // fetch('https://knowledge-hub-server-rho.vercel.app/all-books')
         // .then(res=>res.json())
         // .then(data=>{setBookData(data)
         // setFilteredBooks(data)

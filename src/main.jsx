@@ -47,7 +47,7 @@ const router = createBrowserRouter([
       {
         path:"/all-books",
         element:<PrivateRoute><AllBooks></AllBooks></PrivateRoute>,
-        //loader: ()=>fetch('https://knowledge-hub-server-jkskb25-gmailcom-jamanul-sakibs-projects.vercel.app/all-books'),
+        //loader: ()=>fetch('https://knowledge-hub-server-rho.vercel.app/all-books'),
         children:[
           {
             path:'/all-books',
@@ -66,7 +66,7 @@ const router = createBrowserRouter([
       {
         path:"/updatePage/:id",
         element:<PrivateRoute><UpdatePage></UpdatePage></PrivateRoute>,
-        loader:({params})=>fetch(`https://knowledge-hub-server-jkskb25-gmailcom-jamanul-sakibs-projects.vercel.app/all-books/${params.id}`)
+        loader:({params})=>fetch(`https://knowledge-hub-server-rho.vercel.app/all-books/${params.id}`)
       },
       {
         path:"/category-page/:id",
@@ -75,7 +75,7 @@ const router = createBrowserRouter([
       {
         path:"/detailsPage/:id",
         element:<PrivateRoute><DetailsPage></DetailsPage></PrivateRoute>,
-        loader:({params})=>fetch(`https://knowledge-hub-server-jkskb25-gmailcom-jamanul-sakibs-projects.vercel.app/all-books/${params.id}`)
+        loader:({params})=>fetch(`https://knowledge-hub-server-rho.vercel.app/all-books/${params.id}`)
       }
     ]
   },

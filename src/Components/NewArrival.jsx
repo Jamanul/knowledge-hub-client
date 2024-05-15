@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const NewArrival = () => {
     const [newBooks,setNewBooks]=useState([])
     useEffect(()=>{
-        fetch('https://knowledge-hub-server-jkskb25-gmailcom-jamanul-sakibs-projects.vercel.app/new-arrival')
+        fetch('https://knowledge-hub-server-rho.vercel.app/new-arrival')
           .then(res=>res.json())
           .then(data=>setNewBooks(data))
       },[])

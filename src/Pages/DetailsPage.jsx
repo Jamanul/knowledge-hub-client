@@ -43,13 +43,14 @@ const DetailsPage = () => {
                 category,
                 borrowedDate
             }
-            console.log(borrowedBook)
-            axios.post('https://knowledge-hub-server-jkskb25-gmailcom-jamanul-sakibs-projects.vercel.app/all-borrowed-books',borrowedBook)
+            //console.log(borrowedBook)
+            axios.post('https://knowledge-hub-server-rho.vercel.app/all-borrowed-books',borrowedBook)
             .then(
                 //console.log(data.data)
             )
-            axios.patch(`https://knowledge-hub-server-jkskb25-gmailcom-jamanul-sakibs-projects.vercel.app/all-returned-books/${_id}`,borrowedBook)
-            .then(data=>{console.log(data.data)
+            axios.patch(`https://knowledge-hub-server-rho.vercel.app/all-returned-books/${_id}`,borrowedBook)
+            .then(data=>{
+                //console.log(data.data)
                 
             if(data.data.modifiedCount){
                 toast.success('You have borrowed a book.')

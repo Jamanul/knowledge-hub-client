@@ -11,6 +11,7 @@ const Login = () => {
     const navigate =useNavigate()
     //console.log(navigate)
     const handleLogin=(e)=>{
+        
         e.preventDefault()
         const form=e.target;
         const email=form.email.value
@@ -19,7 +20,7 @@ const Login = () => {
         .then(result=>{
             //console.log(result.user)
             toast.success('Logged in successfully')
-            setLoading(false)
+            // setLoading(false)
             navigate(location.state || '/')
             
         }) 
@@ -32,7 +33,7 @@ const Login = () => {
       loginUserWithGithub()
       .then(result=>{
         toast.success('Logged in successfully')
-        setLoading(false)
+        //setLoading(false)
         navigate(location.state || '/')
       })
       .catch(error=>{
@@ -44,7 +45,7 @@ const Login = () => {
       loginUserWithGoogle()
       .then(result=>{
         toast.success('Logged in successfully')
-        setLoading(false)
+        //setLoading(false)
         navigate(location.state || '/')
       })
       .catch(error=>{
