@@ -126,7 +126,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 text-[#666666] z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 text-[#666666] z-[99] p-2 shadow bg-base-100 rounded-box w-52"
           >
             {links}
           </ul>
@@ -135,12 +135,12 @@ const Navbar = () => {
           {" "}
           <div className="flex items-center justify-center">
             <img
-              className="w-10 rounded-full"
+              className="w-8  md:w-10 rounded-full"
               alt="Tailwind CSS Navbar component"
               src="/Designer.png"
             />
             <div className="text-left ml-2">
-              <p className="text-[#666666]">
+              <p className="text-[#666666] text-[18px] md:text-2xl">
                 Knowledge <span className="text-[#E17A2A]">Hub</span>{" "}
               </p>
             </div>
@@ -173,7 +173,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 text-[#666666] z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 text-[#666666] z-[99] p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
               <p className="text-[#666666] hover:text-[#E17A2A] hover:bg-transparent">{user? user.displayName : 'Your Name'}</p>

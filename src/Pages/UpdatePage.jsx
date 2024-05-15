@@ -48,7 +48,7 @@ const UpdatePage = () => {
         <div className="min-h-screen">
         <div className="hero-content border border-[#E17A2A] rounded-3xl">
           <div className="w-full">
-            <h1 className="text-5xl text-[#666666] border-b pb-2 text-center mx-96 border-[#E17A2A]">
+            <h1 className="text-2xl lg:text-5xl text-[#666666] border-b pb-2 text-center md:mx-48 lg:mx-96 border-[#E17A2A]">
               Update A Book
             </h1>
             <form onSubmit={handleUpdateBook} className="card-body">

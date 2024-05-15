@@ -33,7 +33,7 @@ const AllBooks = () => {
     //console.log(bookData)
   return (
     <div>
-      <h1 className="text-5xl text-[#666666] border-b pb-2 text-center mx-96 border-[#E17A2A]">
+      <h1 className="text-2xl md:text-2xl lg:text-5xl text-[#666666] border-b pb-2 text-center md:mx-48 lg:mx-96 border-[#E17A2A]">
         View AllBooks Books
       </h1>
       <div className="flex justify-between mt-12 mb-6">

@@ -3,8 +3,9 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../FirebaseAuth/AuthProvider';
 import { toast } from 'react-toastify';
 
+
 const Login = () => {
-    const {loginUser,loginUserWithGoogle,user,setLoading}=useContext(AuthContext)
+    const {loginUser,loginUserWithGoogle,user,setLoading,loginUserWithGithub}=useContext(AuthContext)
     const location =useLocation()
     //console.log(location)
     const navigate =useNavigate()
@@ -26,6 +27,30 @@ const Login = () => {
             //console.log(error.message)
             toast.error('User right credentials')
         })
+    }
+    const handleGithubLogin =()=>{
+      loginUserWithGithub()
+      .then(result=>{
+        toast.success('Logged in successfully')
+        setLoading(false)
+        navigate(location.state || '/')
+      })
+      .catch(error=>{
+        //console.log(error.message)
+        toast.error('SOMETHING WENT WRONG')
+    })
+    }
+    const handleGoogleLogin=()=>{
+      loginUserWithGoogle()
+      .then(result=>{
+        toast.success('Logged in successfully')
+        setLoading(false)
+        navigate(location.state || '/')
+      })
+      .catch(error=>{
+        //console.log(error.message)
+        toast.error('SOMETHING WENT WRONG')
+    })
     }
     return (
         <div className="hero min-h-screen">
@@ -56,8 +81,8 @@ const Login = () => {
         </div>
       </form>
       <div className='flex mx-8 justify-between'>
-      <button className="btn bg-[#666666] text-[#fc984c] font-bold">Google</button>
-      <button className="btn bg-[#666666] text-[#fc984c] font-bold">Github</button>
+      <button onClick={handleGoogleLogin} className="btn bg-[#666666] text-[#fc984c] font-bold">Google</button>
+      <button onClick={handleGithubLogin} className="btn bg-[#666666] text-[#fc984c] font-bold">Github</button>
       </div>
       <p className='text-[#666666] text-center mt-4'>Don't have an account? <br /> <span className='text-[#E17A2A] font-bold'><Link to='/registration'>Click here to create an account.</Link></span></p>
     </div>
