@@ -5,13 +5,13 @@ import BookCard from '../Components/BookCard';
 const CategoryPage = () => {
     const [categoryData,setCategoryData]=useState([])
     const category= useParams()
-    console.log(category.id)
+    //console.log(category.id)
     useEffect(()=>{
         fetch(`https://knowledge-hub-server-jkskb25-gmailcom-jamanul-sakibs-projects.vercel.app/all-books?category=${category.id}`)
         .then(res=>res.json())
         .then(data=>setCategoryData(data))
     },[category.id])
-    console.log(categoryData)
+    //console.log(categoryData)
     return (
        <div>
          <div className="text-center">
