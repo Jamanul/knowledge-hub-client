@@ -21,6 +21,7 @@ import CardView from './Components/CardView.jsx';
 import UpdatePage from './Pages/UpdatePage.jsx';
 import CategoryPage from './Pages/CategoryPage.jsx';
 import DetailsPage from './Pages/DetailsPage.jsx';
+import BuyBooks from './Pages/BuyBooks.jsx';
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path:"/add-books",
         element:<PrivateRoute><AddBooks></AddBooks></PrivateRoute>
+      },
+      {
+        path:'/buy-books',
+        element:<PrivateRoute><BuyBooks></BuyBooks></PrivateRoute>
       },
       {
         path:"/all-books",

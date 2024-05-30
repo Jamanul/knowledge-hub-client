@@ -20,7 +20,7 @@ const DetailsPage = () => {
         rating,
         short_description,
         long_description,
-        category} =singleBook
+        category,price} =singleBook
         const [bookQuantity,setBookQuantity]=useState(quantity)
         const handleBorrowBooks =(e)=>{
             e.preventDefault()
@@ -41,7 +41,8 @@ const DetailsPage = () => {
                 short_description,
                 long_description,
                 category,
-                borrowedDate
+                borrowedDate,
+                price
             }
             //console.log(borrowedBook)
             axios.post('https://knowledge-hub-server-rho.vercel.app/all-borrowed-books',borrowedBook)
